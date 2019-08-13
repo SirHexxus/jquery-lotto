@@ -65,7 +65,9 @@
           lottoNumbers = random.toString()+ " " + lottoNumbers;
           // lottoNumbers += random.toString()
         }
+        // console.log(lottoNumbers);
         // Then prepend the lotto number to the top of our random-number div.
+        $("#random-number").prepend("<div>" + lottoNumbers + "</div><hr>");
       });
     });
 
