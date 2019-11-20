@@ -1,5 +1,4 @@
 <!-- Lottery Generator HTML -->
-<!-- THIS IS A TEST!!! -->
 
 <!DOCTYPE html>
 
@@ -17,12 +16,17 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
     <!-- Added a link to Font Awesome CDN-->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+    #bgColor{
+      background-color: orange;
+    }
+    </style>
   </head>
 
-  <body>
+  <body id="bgColor">
 
     <div class="jumbotron">
-
+      
       <h1 class="text-center">Generate Lottery Numbers!</h1>
 
       <div class="text-center">
@@ -35,8 +39,9 @@
     </div>
 
     <!-- Here we have the div where our number will go called random-number -->
+    <ol>
     <h1 class="text-center" id="random-number"></h1>
-
+    </ol>
     <!-- Script -->
     <script type="text/javascript">
 
@@ -48,8 +53,6 @@
 
       // When random-button is clicked...
       $("#random-button").click(function(){
-        
-
       
 
         // ...create a string which will hold the lottery number.
@@ -66,8 +69,11 @@
           // lottoNumbers += random.toString()
         }
         // console.log(lottoNumbers);
-        // Then prepend the lotto number to the top of our random-number div.
-        $("#random-number").prepend("<div>" + lottoNumbers + "</div><hr>");
+         $("#random-number").append("<div><li>" + lottoNumbers + "</li></div><hr>");
+        
+        
+      
+      
       });
     });
 
